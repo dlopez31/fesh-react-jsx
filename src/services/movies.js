@@ -8,7 +8,6 @@ export const searchMovies = async ({ search }) => {
 			`https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${search}`
 		);
 		const json = await response.json();
-
 		const movies = json.Search;
 		return movies?.map(movie => ({
 			id: movie.imdbID,

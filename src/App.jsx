@@ -12,14 +12,14 @@ function App() {
 
 	const debouncedGetMovies = useCallback(
 		debounce(search => {
-			getMovies({ search });
+			getMovies(search);
 		}, 300),
 		[]
 	);
 
 	const handleOnSubmit = e => {
 		e.preventDefault();
-		getMovies({ search });
+		getMovies(search);
 	};
 
 	const handleOnChange = e => {

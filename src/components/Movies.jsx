@@ -8,5 +8,5 @@ export const Movies = ({ movies }) => {
 };
 
 Movies.propTypes = {
-	movies: PropTypes.object,
+	movies: PropTypes.array,
 };
