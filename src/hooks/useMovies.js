@@ -15,7 +15,7 @@ export const useMovies = ({ search, sort }) => {
 			setError(null);
 			previousSearch.current = search;
 			const newMovies = await searchMovies({ search });
-			setMovies(newMovies);
+			setMovies(newMovies || []);
 		} catch (e) {
 			setError(e.message);
 		} finally {
